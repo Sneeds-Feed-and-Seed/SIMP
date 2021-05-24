@@ -703,10 +703,7 @@ script_fu_marshal_procedure_call (scheme   *sc,
       else if (G_VALUE_HOLDS (&value, G_TYPE_STRV))
         {
           vector = sc->vptr->pair_car (a);  /* vector is pointing to a list */
-          if (! sc->vptr->is_list (sc, vector))
-            success = FALSE;
-
-          if (success)
+          if (sc->vptr->is_list (sc, vector))
             {
               gchar **array;
 

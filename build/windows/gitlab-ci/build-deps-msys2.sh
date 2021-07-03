@@ -27,17 +27,24 @@ pacman --noconfirm -S --needed \
     mingw-w64-$MSYS2_ARCH-toolchain \
     mingw-w64-$MSYS2_ARCH-meson \
     \
+    mingw-w64-$MSYS2_ARCH-adwaita-icon-theme \
+    mingw-w64-$MSYS2_ARCH-atk \
     mingw-w64-$MSYS2_ARCH-cairo \
     mingw-w64-$MSYS2_ARCH-crt-git \
+    mingw-w64-$MSYS2_ARCH-gdk-pixbuf2 \
     mingw-w64-$MSYS2_ARCH-glib-networking \
     mingw-w64-$MSYS2_ARCH-gobject-introspection \
     mingw-w64-$MSYS2_ARCH-json-glib \
     mingw-w64-$MSYS2_ARCH-lcms2 \
     mingw-w64-$MSYS2_ARCH-lensfun \
+    mingw-w64-$MSYS2_ARCH-libepoxy \
     mingw-w64-$MSYS2_ARCH-libspiro \
+    mingw-w64-$MSYS2_ARCH-libxslt \
     mingw-w64-$MSYS2_ARCH-maxflow \
     mingw-w64-$MSYS2_ARCH-openexr \
     mingw-w64-$MSYS2_ARCH-pango \
+    mingw-w64-$MSYS2_ARCH-sassc \
+    mingw-w64-$MSYS2_ARCH-shared-mime-info \
     mingw-w64-$MSYS2_ARCH-suitesparse \
     mingw-w64-$MSYS2_ARCH-vala
 
@@ -114,6 +121,8 @@ wget "https://github.com/msys2/MINGW-packages/raw/master/mingw-w64-gtk3/0004-Dis
 patch -p1 < 0002-Revert-Quartz-Set-the-popup-menu-type-hint-before-re.patch
 patch -p1 < 0003-gtkwindow-Don-t-force-enable-CSD-under-Windows.patch
 patch -p1 < 0004-Disable-low-level-keyboard-hook.patch
+# Patches not in MSYS2 build.
+patch -p1 < ../build/windows/patches/gtk3-24-mr3275-gimp-issue-5475.patch
 
 mkdir _build
 cd _build

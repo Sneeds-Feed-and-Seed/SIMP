@@ -1,3 +1,3 @@
-i got fucking jannied lol
-sneethe
-t. develoncoin
+i got fucking jannied lol \n
+sneethe \n 
+t. develoncoin \n

@@ -1,1 +1,1 @@
-moved to https://github.com/EverlastingEndeavour/brushes & https://github.com/Sneeds-Feed-and-Seed/brushes
+moved to https://github.com/Sneeds-Feed-and-Seed/brushes
